@@ -15,11 +15,7 @@ app.use(cors());
 app.use(express.json());
 
 // Route handlers
-app.use("/", (req, res) => {
-  res.send(
-    "We Love Movies... Tis is the home page and it's not connected to thr frontend type '/movies', '/theaters' or '/reviews' to retrieve the data"
-  );
-});
+
 app.use("/movies", moviesRouter);
 app.use("/theaters", theatersRouter);
 app.use("/reviews", reviewsRouter);
