@@ -15,6 +15,7 @@ app.use(cors());
 app.use(express.json());
 
 // Route handlers
+app.use("/");
 app.use("/movies", moviesRouter);
 app.use("/theaters", theatersRouter);
 app.use("/reviews", reviewsRouter);
