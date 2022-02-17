@@ -15,7 +15,11 @@ app.use(cors());
 app.use(express.json());
 
 // Route handlers
-app.use("/");
+app.use("/", (req, res) => {
+  res.send(
+    "We Love Movies... please use '/' and the type movies, theaters or reviews to see the data"
+  );
+});
 app.use("/movies", moviesRouter);
 app.use("/theaters", theatersRouter);
 app.use("/reviews", reviewsRouter);
